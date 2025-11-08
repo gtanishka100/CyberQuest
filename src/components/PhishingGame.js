@@ -138,21 +138,21 @@ const EmailPreview = ({ from, subject, content, link }) => (
     <div className="mb-4">
       <p className="text-slate-300 text-base leading-relaxed">{content}</p>
     </div>
-
     {link && (
       <div className="mt-4">
         <p className="text-slate-400 text-sm mb-2">Click here:</p>
-        <a
-          href="#"
+        <button
+          type="button"
           className="text-cyan-400 hover:text-cyan-300 underline break-all text-sm"
           onClick={(e) => e.preventDefault()}
         >
           {link}
-        </a>
+        </button>
       </div>
     )}
   </div>
 );
+
 const ActionButtons = ({ onSafe, onPhishing }) => (
   <div className="flex gap-4 max-w-2xl mx-auto mt-8">
     <button
@@ -169,12 +169,13 @@ const ActionButtons = ({ onSafe, onPhishing }) => (
     </button>
   </div>
 );
+
 export default function PhishingDetective() {
   const [showModal, setShowModal] = useState(true);
-  const [score, setScore] = useState(250);
-  const [level, setLevel] = useState(1);
-  const [progress, setProgress] = useState(3);
-  const [threatsIdentified, setThreatsIdentified] = useState(8);
+  const [score] = useState(250);
+  const [level] = useState(1);
+  const [progress] = useState(3);
+  const [threatsIdentified] = useState(8);
 
   const emailData = {
     from: "security@yourbank-update.com",
