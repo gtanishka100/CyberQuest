@@ -11,20 +11,18 @@ import CyberQuestLogin from "./components/signup";
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<CyberQuestLanding />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/leaderboard" element={<Leaderboard />} />
-          <Route path="/phishing-game" element={<PhishingGame />} />
-          <Route path="/password" element={<PasswordStrengthArena />} />
-          <Route path="/profile" element={<ProfileAnalytics />} />
-          <Route path="/dashboard" element={<CyberQuestDashboard />} />
-          <Route path="/signup" element={<CyberQuestLogin />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<CyberQuestLanding />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/leaderboard" element={<Leaderboard />} />
+        <Route path="/phishing-game" element={<PhishingGame />} />
+        <Route path="/password" element={<PasswordStrengthArena />} />
+        <Route path="/profile" element={<ProfileAnalytics />} />
+        <Route path="/dashboard" element={<CyberQuestDashboard />} />
+        <Route path="/signup" element={<CyberQuestLogin />} />
+      </Routes>
+    </div>
   );
 }
 
