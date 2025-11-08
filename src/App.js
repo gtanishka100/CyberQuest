@@ -1,6 +1,5 @@
 import React from "react";
 import SignIn from "./components/SignIn";
-import "./index.css";
 
 function App() {
   return (
